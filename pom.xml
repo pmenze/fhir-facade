@@ -27,12 +27,10 @@
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
 
-    <!-- Projektspezifische Eigenschaften -->
     <properties>
         <java.version>17</java.version>
     </properties>
 
-    <!-- Abhängigkeiten des Projekts -->
     <dependencies>
 
         <dependency>
@@ -40,7 +38,6 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
-        <!-- Spring Boot Web Starter-Abhängigkeit für Web-Anwendungen -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -60,13 +57,28 @@
         <!-- HAPI FHIR-Abhängigkeit für FHIR-R4-Strukturen -->
         <dependency>
             <groupId>ca.uhn.hapi.fhir</groupId>
+            <artifactId>hapi-fhir-base</artifactId>
+            <version>7.6.0</version>
+        </dependency>
+        <dependency>
+            <groupId>ca.uhn.hapi.fhir</groupId>
             <artifactId>hapi-fhir-structures-r4</artifactId>
-            <version>5.4.0</version>
+            <version>7.6.0</version>
         </dependency>
         <dependency>
             <groupId>ca.uhn.hapi.fhir</groupId>
             <artifactId>hapi-fhir-server</artifactId>
-            <version>5.4.0</version>
+            <version>7.6.0</version>
+        </dependency>
+        <dependency>
+            <groupId>ca.uhn.hapi.fhir</groupId>
+            <artifactId>hapi-fhir-validation</artifactId>
+            <version>7.6.0</version>
+        </dependency>
+        <dependency>
+            <groupId>ca.uhn.hapi.fhir</groupId>
+            <artifactId>hapi-fhir-caching-caffeine</artifactId>
+            <version>7.6.0</version>
         </dependency>
 
         <!-- Spring Boot Starter-Abhängigkeit für grundlegende Spring Boot-Funktionen -->
