@@ -18,8 +18,8 @@ import com.example.demo.service.ProprietaryApiService;
 
 import ca.uhn.fhir.context.FhirContext;
 
-@RestController
-@RequestMapping("/fhir")
+// @RestController
+// @RequestMapping("/fhir")
 public class FhirController {
 
     private static final Logger logger = LoggerFactory.getLogger(FhirController.class);
@@ -30,7 +30,7 @@ public class FhirController {
         this.proprietaryApiService = proprietaryApiService;
     }
 
-    @PostMapping("/Patient")
+    // @PostMapping("/Patient")
     public ResponseEntity<String> createPatient(@RequestBody String patientResource) {
         final var parser = fhirContext.newJsonParser();
         try {
