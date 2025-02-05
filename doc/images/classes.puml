@@ -1,0 +1,18 @@
+@startuml
+
+App1 --> FhirFacade: POST /Patient
+FhirFacade --> FHirRestfulServlet: POST /Patient
+FHirRestfulServlet --> PatientRessourceProvider: create
+PatientRessourceProvider --> ProprietaryAPIService: sendPatientData
+ProprietaryAPIService --> FhirToProprietaryPatient: formatPatientData(Fhir Patient)
+
+FhirToProprietaryPatient --> ProprietaryAPIService: Proprietary Patient
+ProprietaryAPIService --> ProprietarySystem: POST /Person
+
+ProprietarySystem --> ProprietaryAPIService
+ProprietaryAPIService --> PatientRessourceProvider
+PatientRessourceProvider --> FHirRestfulServlet
+FHirRestfulServlet --> FhirFacade
+FhirFacade --> App1 : HTTP Response
+
+@enduml

@@ -15,8 +15,8 @@ public class FhirDocumentReferenceToProprietaryDocument {
         proprietaryDocument.setDateCreated(dateFormat.format(documentReference.getDate()));
         proprietaryDocument
                 .setContentB64(
-                        documentReference.getContent().getFirst().getAttachment().getDataElement().asStringValue());
-        proprietaryDocument.setKdlCode(documentReference.getType().getCoding().getFirst().getCode());
+                        documentReference.getContent().get(0).getAttachment().getDataElement().asStringValue());
+        proprietaryDocument.setKdlCode(documentReference.getType().getCoding().get(0).getCode());
 
         // TODO: Read Patient Identifier
         // TODO: Read Encounter ID

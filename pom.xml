@@ -9,7 +9,7 @@
     <!-- Gruppen-ID des Projekts -->
     <groupId>com.example</groupId>
     <!-- Artefakt-ID des Projekts -->
-    <artifactId>demo</artifactId>
+    <artifactId>fhir-facade</artifactId>
     <!-- Versionsnummer des Projekts -->
     <version>0.0.1-SNAPSHOT</version>
     <!-- Verpackungstyp des Projekts -->

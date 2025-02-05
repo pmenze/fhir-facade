@@ -1,0 +1,9 @@
+@startuml
+
+component FhirFacade #grey
+
+[App1] --> [FhirFacade]
+[App2] --> [FhirFacade]
+[FhirFacade] --> [PropietarySystem]
+
+@enduml
